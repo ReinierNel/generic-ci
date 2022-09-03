@@ -58,7 +58,7 @@ RUN	curl -L "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" -o he
 RUN curl -LO "https://github.com/cli/cli/releases/download/v${GITHUB_CLI_VERSION}/gh_${GITHUB_CLI_VERSION}_linux_amd64.tar.gz" && \
     tar -zxf gh_${GITHUB_CLI_VERSION}_linux_amd64.tar.gz && \
     mv gh_${GITHUB_CLI_VERSION}_linux_amd64/bin/gh /usr/local/bin && \
-	rm gh_${GITHUB_CLI_VERSION}_linux_amd64/bin/gh
+	rm -rf gh_${GITHUB_CLI_VERSION}_linux_amd64
 # azure cli
 RUN pip install --upgrade pip && \
     pip install azure-cli==${AZ_CLI_VERSION}
