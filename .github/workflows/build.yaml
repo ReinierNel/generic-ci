@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       env:
-        if: ${{ contains($env.GITHUB_REF, 'feature') }}
+        if: ${{ contains( env.GITHUB_REF, 'feature') }}
           branch_tag: ${{ contains($GITHUB_REF, 'main') }}
-        if: ${{ contains($env.GITHUB_REF, 'main') }}
+        if: ${{ contains( env.GITHUB_REF, 'main') }}
           branch_tag: main
       - name: Checkout
         uses: actions/checkout@v3
