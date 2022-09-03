@@ -9,11 +9,10 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      if: ${{ contains($GITHUB_REF, 'feature') }}
-        env:
+      env:
+        if: ${{ contains($GITHUB_REF, 'feature') }}
           branch_tag: dev
-      if: ${{ contains($GITHUB_REF, 'main') }}
-        env:
+        if: ${{ contains($GITHUB_REF, 'main') }}
           branch_tag: main
       - name: Checkout
         uses: actions/checkout@v3
