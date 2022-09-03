@@ -25,4 +25,4 @@ jobs:
         with:
           push: true
           tags:
-            - reiniernel89/generic-ci:latest
+            - "reiniernel89/generic-ci:latest"
