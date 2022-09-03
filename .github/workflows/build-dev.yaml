@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: "reiniernel89/generic-ci:dev-$GITHUB_SHA"
+          tags: "reiniernel89/generic-ci:dev"
