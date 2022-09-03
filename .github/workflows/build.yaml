@@ -11,7 +11,7 @@ jobs:
     steps:
       env:
         if: ${{ contains( env.GITHUB_REF, 'feature') }}
-          branch_tag: ${{ contains($GITHUB_REF, 'main') }}
+          branch_tag: dev
         if: ${{ contains( env.GITHUB_REF, 'main') }}
           branch_tag: main
       - name: Checkout
