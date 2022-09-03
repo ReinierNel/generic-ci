@@ -9,11 +9,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      env:
-        if: ${{ contains( env.GITHUB_REF, 'feature') }}
-          branch_tag: dev
-        if: ${{ contains( env.GITHUB_REF, 'main') }}
-          branch_tag: main
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set up QEMU
@@ -31,4 +26,3 @@ jobs:
           push: true
           tags:
             - reiniernel89/generic-ci:latest
-            - reiniernel89/generic-ci:$branch_tag
